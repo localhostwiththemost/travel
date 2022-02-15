@@ -167,3 +167,23 @@
 .form-invalid {
   outline: 2px solid $color-error-red;
 }
+
+// CONTACT PAGE FORM THANK YOU MESSAGE
+.contact-form-thanks {
+  width: 75%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.3rem;
+  color: $color-black;
+  font-size: 1.6rem;
+  padding: 5rem;
+  text-align: center;
+  text-transform: none;
+  white-space: normal;
+}
+
+.thanks-bg {
+  background-color: $color-primary-light;
+}

@@ -71,7 +71,7 @@ $message_sent = true;
         ?>
    <body class="thanks-bg">
      <div class="contact-form-thanks u-margin-top-big u-margin-bottom-big">
-      <h2 class="heading-secondary">Thanks, I'll be in touch</h2>
+      <h2 class="heading-secondary">Thanks, we'll be in touch</h2>
       <div class="u-center-text u-margin-top-small">
         <a href="index.php" class="btn-text">Return to home page</a>
       </div>
@@ -107,7 +107,7 @@ $message_sent = true;
           <!--Span is used to markup part of some text, in this case h1-->
           <div class="img-container">
             <img
-              src="img/compassrose-min.png"
+              src="img/compassrose-min.webp"
               class="img-container__compassimg"
               alt="An image of a compass"
               />
