@@ -1,0 +1,70 @@
+.img-container {
+  display: block;
+
+  &__compassimg {
+    height: 20%;
+    width: 20%;
+    margin-top: 1rem;
+
+    @include respond(phone) {
+      height: 30%;
+      width: 30%;
+      margin-top: 0.5rem;
+    }
+
+    @include respond(small-phone) {
+      height: 40%;
+      width: 40%;
+    }
+  }
+}
+
+.aboutus-img {
+  border-radius: 90%;
+
+  @include respond(tab-portrait) {
+    height: 30rem;
+    width: 30rem;
+  }
+}
+
+// UNTROUBLED TRAVELER section
+.feature-1 {
+  -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  background-image: url("../img/map-min.webp");
+  border-radius: 0.3rem;
+  color: $color-black;
+  font-family: "Lora", serif;
+  text-align: center;
+  background-repeat: no-repeat;
+  padding: 5rem;
+
+  @include respond(small-phone) {
+    padding: 3rem;
+  }
+
+  @include respond(mini-phone) {
+    padding: 2rem;
+  }
+}
+
+.feature-2 {
+  -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  background-image: url("../img/bag-min.webp");
+  border-radius: 0.3rem;
+  color: $color-black;
+  font-family: "Lora", serif;
+  padding: 5rem;
+  text-align: center;
+  background-repeat: no-repeat;
+
+  @include respond(small-phone) {
+    padding: 3rem;
+  }
+
+  @include respond(mini-phone) {
+    padding: 2rem;
+  }
+}

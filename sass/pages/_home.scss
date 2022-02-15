@@ -1,0 +1,54 @@
+.section-cards {
+  padding: 8rem 0; // 100px top/bottom, 0 left/right
+  background-color: $color-offwhite;
+
+  @include respond(tab-landscape) {
+    // width < 1200px
+    padding: 8rem 5rem;
+  }
+
+  @include respond(tab-portrait) {
+    // width < 900px
+    padding: 8rem 0;
+  }
+}
+
+.section-mission {
+  padding: 8rem 0;
+  background-color: $color-primary-light;
+
+  @include respond(tab-landscape) {
+    // width < 1200px
+    padding: 8rem 5rem;
+  }
+
+  @include respond(tab-portrait) {
+    // width < 900px
+    padding: 8rem 0;
+  }
+}
+
+.section-contact {
+  padding: 8rem 0;
+  background-color: $color-offwhite;
+}
+
+.section-testimonials {
+  padding: 8rem 0;
+  background-color: $color-primary-light;
+
+  @include respond(tab-landscape) {
+    // width < 1200px
+    padding: 8rem 5rem;
+  }
+
+  @include respond(tab-portrait) {
+    // width < 900px
+    padding: 8rem 0;
+  }
+}
+
+.section-aboutus {
+  padding: 8rem 0 16rem 0;
+  background-color: $color-offwhite;
+}

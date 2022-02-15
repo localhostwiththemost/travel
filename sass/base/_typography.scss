@@ -1,0 +1,177 @@
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.7; /*The line-height is 1.7 times bigger than default(depends on font-size)*/
+}
+
+.heading-primary {
+  // ALL h1's
+  color: $color-primary;
+
+  // HEADER
+  &--main {
+    // The Untroubled Traveller heading
+    display: block; /*Block elements create linebreaks before and after them(what we want here)*/
+    font-size: 6.8rem;
+    font-family: "Licorice", cursive;
+    font-weight: 300;
+    letter-spacing: 0.5rem;
+    white-space: nowrap;
+    text-shadow: 1.5px 1.5px #698696;
+    margin-top: -1rem;
+    margin-bottom: -3rem;
+    //animation-name: moveInTop;
+    //animation-duration: 1s;
+    //animation-timing-function: ease-out; /*Faster to start, slower to end*/
+
+    @include respond(tab-landscape) {
+      margin-top: -6rem;
+    }
+
+    @include respond(phone) {
+      font-size: 5.8rem;
+      white-space: normal;
+      line-height: 1.2;
+      margin-top: 0.5rem;
+      margin-bottom: 0.1rem;
+    }
+
+    @include respond(small-phone) {
+      font-size: 5rem;
+      margin-top: -5rem;
+    }
+
+    @include respond(tiny-phone) {
+      line-height: 1;
+    }
+  }
+
+  &--sub {
+    // Go Make Memories! heading
+    display: block; /*Block elements take up 100% of the width of the viewport(not height)*/
+    font-size: 2.8rem; //3rem
+    font-weight: 400;
+    font-family: "Lora", serif;
+    text-shadow: 0.5px 0.5px #28465c;
+    letter-spacing: 0.2rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem; // Space between heading and btn below
+    white-space: nowrap;
+    //animation-name: moveInBottom;
+    //animation-delay: 0.2s;
+    //animation-duration: 2.6s;
+    //animation-timing-function: ease-out; /*Faster to start, slower to end*/
+
+    @include respond(small-phone) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &--title {
+    display: block;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 1rem;
+  }
+}
+
+.heading-secondary {
+  // ALL h2's
+  font-size: 3.5rem;
+  font-weight: 200;
+  font-family: "Lora", serif;
+  color: $color-grey-dark;
+  text-transform: uppercase;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.8rem;
+
+  @include respond(tab-portrait) {
+    margin-top: 7rem;
+  }
+
+  &__aboutus {
+    @include respond(phone) {
+      margin-top: 10rem;
+    }
+
+    @include respond(small-phone) {
+      margin-top: 12rem;
+    }
+
+    @include respond(tiny-phone) {
+      margin-top: 13rem;
+    }
+  }
+
+  &::after {
+    display: block;
+    height: 2px;
+    background-color: $color-primary;
+    content: " ";
+    width: 40rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    @include respond(tiny-phone) {
+      width: 30rem;
+    }
+  }
+}
+
+.heading-tertiary {
+  // ALL h3's
+  font-family: "Raleway", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  //white-space: nowrap;
+
+  @include respond(tab-landscape) {
+    line-height: 125%;
+  }
+
+  @include respond(small-phone) {
+    // When the screen width is LESS THAN 450px
+    font-size: 2rem;
+  }
+}
+
+// Text at start of some sections
+.section-intro {
+  font-family: "Lora", serif;
+  font-size: 1.9rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+
+  &__aboutus {
+    padding-left: 13rem;
+    padding-right: 13rem;
+
+    @include respond(tab-portrait) {
+      padding-left: 9rem;
+      padding-right: 9rem;
+    }
+
+    @include respond(phone) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    @include respond(small-phone) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    @include respond(tiny-phone) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  &__mission {
+    @include respond(phone) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+}

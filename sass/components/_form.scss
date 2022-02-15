@@ -1,0 +1,169 @@
+.contact-form-container {
+  width: 50%;
+  border-radius: $default-border-radius;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  // 0 x, 1.5rem y, 4rem blur, black w/ 20% opacity
+  background-color: $color-white;
+  margin: 0 auto;
+  padding: 5rem;
+  display: block;
+  text-align: center;
+
+  @include respond(tab-portrait) {
+    width: 70%;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    font-family: inherit; // Browsers change the font of forms automatically so we must reset it here
+    color: inherit; // Same goes for font color^
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: $color-offwhite;
+    border: none; // Removes default border
+    border-bottom: 3px solid transparent;
+    // We need the border-bottom in the initial state to prevent the email input from being pushed...
+    //... down by the 3px that are created when the full name input is in focus state.
+    // transparent because we only want the border to appear when an input is in focus state
+    width: 80%; // Takes up 80% of the .book element's width
+    display: block; // Must define block to use padding properties
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; // Transition from red to green when user types in inputs
+    margin: 0 auto; // Centers inputs in container
+
+    &:focus {
+      // When the form is clicked, it is in the focus state
+      outline: none; // Removes blue outline
+      -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      // We apply box-shadow here to make clear the form is in focus state since we removed the outline
+      border-bottom: 3px solid $color-success-green;
+    }
+
+    &:focus:invalid {
+      // Styles for the input element when in focus state and the input is invalid
+      border-bottom: 3px solid $color-error-red;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey;
+    }
+
+    &::-moz-placeholder {
+      color: $color-grey;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color-grey;
+    }
+
+    &::-ms-input-placeholder {
+      color: $color-grey;
+    }
+
+    &::placeholder {
+      color: $color-grey;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey; // Styles placeholder text(Chrome, Safari)
+    }
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; // Removes number spinner from phone input
+    margin: 0;
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 2.5rem; // We're using margin to position the labels directly under the placeholders
+    margin-top: 0.7rem;
+    display: block; // We must define the display as block to use margin properties
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    white-space: nowrap;
+
+    @include respond(tab-portrait) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    // We use the adjacent sibling selector(+) to select both the input and label because in the...
+    // ... html, they are siblings within the same div.
+    opacity: 0; // We need opacity to animate the label appearing
+    visibility: hidden; // With opacity:0, the element is stll there just not visible. This fixs it.
+    -webkit-transform: translateY(-4rem);
+    -ms-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+    // In this initial state, the label will start in the actual input and will then move down and...
+    // ... become visble later when the user begins typing in the input.
+  }
+
+  &__textarea {
+    font-size: 1.5rem;
+    font-family: inherit; // Browsers change the font of forms automatically so we must reset it here
+    color: inherit; // Same goes for font color^
+    border-radius: 2px;
+    background-color: $color-offwhite;
+    border: none; // Removes default border
+    resize: none;
+    padding: 1rem;
+    display: block;
+
+    @include respond(tab-portrait) {
+      //width > 900px
+      width: 90%;
+    }
+
+    &-label {
+      font-size: $default-font-size;
+      font-weight: bold;
+      margin-right: 3rem;
+
+      @include respond(tab-portrait) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-p {
+    font-size: $default-font-size;
+    font-weight: bold;
+
+    @include respond(small-phone) {
+      // When the screen width is LESS THAN 450px
+      display: inline-block;
+      margin-top: 5rem;
+    }
+  }
+
+  &__radio-label {
+    font-size: $default-font-size;
+  }
+
+  &__radio-btn {
+    display: inline-block;
+  }
+}
+
+// IF the form is submitted unsuccessfully, the required inputs should appear with a red outline
+.form-invalid {
+  outline: 2px solid $color-error-red;
+}

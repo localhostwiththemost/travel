@@ -1,0 +1,47 @@
+.header {
+  height: 100vh;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(#64abe3, 0.6)),
+      to(rgba(blue, 0))
+    ),
+    url("../img/hero-min.webp");
+  background-image: -o-linear-gradient(top, rgba(#64abe3, 0.6), rgba(blue, 0)),
+    url("../img/hero-min.webp");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(#64abe3, 0.6),
+      rgba(blue, 0)
+    ),
+    url("../img/hero-min.webp");
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  position: relative;
+
+  @include respond(tab-landscape) {
+    // When the screen width is LESS THAN 1200px scroll with the page(mobile safari bug)
+    background-attachment: scroll;
+    padding: 8rem 5rem;
+  }
+
+  @include respond(tab-portrait) {
+    // width < 900px
+    padding: 8rem 0;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 33%; /*33% from the top and 50% from the left of the header(parent element)*/
+    left: 50%; /*Measurement starts at the top left of the .text-box element(Therefore its off center)*/
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(
+      -50%,
+      -50%
+    ); /*Shifts 50% of the element's(text-box) width to the left and 50% of the element's height to the top(centers text-box)*/
+    text-align: center; /*Centers call to action button under the h1*/
+  }
+}

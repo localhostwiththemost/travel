@@ -1,0 +1,86 @@
+// TESTIMONIALS
+.client {
+  -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.3rem;
+  color: $color-black;
+  font-size: $default-font-size;
+  font-family: "Lora", serif;
+  padding: 5rem;
+  text-align: center;
+
+  @include respond(tab-landscape) {
+    padding: 5rem;
+  }
+
+  @include respond(tab-portrait) {
+    padding: 4rem;
+  }
+}
+
+figcaption {
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+
+// TRAVEL UNTROUBLED section
+.feature-textbox {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba($color-white, 0.8)),
+    to(rgba($color-white, 0.8))
+  );
+  background: -o-linear-gradient(
+    left top,
+    rgba($color-white, 0.8),
+    rgba($color-white, 0.8)
+  );
+  background: linear-gradient(
+    to right bottom,
+    rgba($color-white, 0.8),
+    rgba($color-white, 0.8)
+  );
+  padding: 0.7rem;
+}
+
+.p-feature {
+  font-family: "Lora", serif;
+  font-size: $default-font-size;
+  padding: 0rem 6rem;
+  margin-top: 0.5rem;
+
+  @include respond(tab-landscape) {
+    padding: 0 3rem;
+  }
+}
+
+// ABOUT US section
+.aboutus-caption {
+  -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.3rem;
+  color: $color-black;
+  font-size: $default-font-size;
+  font-family: "Lora", serif;
+  padding: 4rem;
+  text-align: center;
+  width: 60%;
+
+  @include respond(phone) {
+    width: 90%;
+  }
+
+  @include respond(small-phone) {
+    width: 100%;
+  }
+
+  @include respond(mini-phone) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

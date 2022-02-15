@@ -1,0 +1,310 @@
+.card {
+  // FUNCTIONALITY
+  -webkit-perspective: 150rem;
+  perspective: 150rem; // The lower the perspective value, the more dramatic.
+  // We want a subtle flip in this case, so 1500px
+  -moz-perspective: 150rem; // Mozilla Firefox responsive
+  position: relative; // When absolute positioning a child element the parent must be relative.
+  height: 51rem; // When we absolute positioned the cards, we took them out of the natural flow...
+  // ... which caused their height to collapse. The fix to this is setting the parent's height to...
+  // ... the same as each side.
+
+  &__side {
+    height: 51rem;
+    -webkit-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    transition: all 0.8s ease; // all allows all transforms, .8s duration, ease smooths the effect
+    position: absolute; // The sides must be positioned on top of each other to complete the effect
+    top: 0;
+    left: 0;
+    width: 100%; // When the sides are absolute positioned, the front is slightly wider than the...
+    //... back because the sides fit to their content's width. Here we're fixing that.
+    -webkit-backface-visibility: hidden; // SAFARI
+    backface-visibility: hidden; // Hides the back side of an element, only 1 side is visble at atime
+    border-radius: $default-border-radius;
+    overflow: hidden; // Imgs are overflowing parent element so we must hide the overflow
+    -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: -webkit-gradient(
+          linear,
+          right bottom,
+          left top,
+          from($color-sunset-orange),
+          to($color-sky-blue)
+        );
+        background-image: -o-linear-gradient(
+          bottom right,
+          $color-sunset-orange,
+          $color-sky-blue
+        );
+        background-image: linear-gradient(
+          to top left,
+          $color-sunset-orange,
+          $color-sky-blue
+        );
+      }
+
+      &-2 {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($color-sunset-orange),
+          to($color-sky-blue)
+        );
+        background-image: -o-linear-gradient(
+          left top,
+          $color-sunset-orange,
+          $color-sky-blue
+        );
+        background-image: linear-gradient(
+          to right bottom,
+          $color-sunset-orange,
+          $color-sky-blue
+        );
+      }
+
+      &-3 {
+        background-image: -webkit-gradient(
+          linear,
+          right bottom,
+          left top,
+          from($color-sunset-orange),
+          to($color-sky-blue)
+        );
+        background-image: -o-linear-gradient(
+          bottom right,
+          $color-sunset-orange,
+          $color-sky-blue
+        );
+        background-image: linear-gradient(
+          to top left,
+          $color-sunset-orange,
+          $color-sky-blue
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    // When we hover the card, the .card__side--front will be transformed
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    // On hover, flips card on y-axis. -180 to get a proper flip
+    // ONLY the front side rotates 180 deg
+  }
+
+  &:hover &__side--back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    // The back side is already rotated so it stays at 0
+  }
+
+  // CARD FRONT SIDE STYLING
+  &__picture {
+    background-size: cover; // We want each img to fit properly inside each card
+    height: 28rem; // We have to size the imgs manually
+    background-blend-mode: screen; // Allows the imgs to be visible thru the gradient w/a nice effect
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    // Compatible across all browsers
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    // top-left: 0 0, top-right: 100% 0, bottom-right: 100% 85%, bottom-left: 0 100%
+
+    &--1 {
+      background-image: -webkit-gradient(
+          linear,
+          right top,
+          left bottom,
+          from(rgba($color-primary, 0.55)),
+          to(rgba($color-primary, 0.55))
+        ),
+        url(../img/cruise-min.webp);
+      background-image: -o-linear-gradient(
+          right top,
+          rgba($color-primary, 0.55),
+          rgba($color-primary, 0.55)
+        ),
+        url(../img/cruise-min.webp);
+      background-image: linear-gradient(
+          to left bottom,
+          rgba($color-primary, 0.55),
+          rgba($color-primary, 0.55)
+        ),
+        url(../img/cruise-min.webp);
+    }
+
+    &--2 {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from(rgba($color-primary, 0.55)),
+          to(rgba($color-primary, 0.55))
+        ),
+        url(../img/tour-min.webp);
+      background-image: -o-linear-gradient(
+          left top,
+          rgba($color-primary, 0.55),
+          rgba($color-primary, 0.55)
+        ),
+        url(../img/tour-min.webp);
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary, 0.55),
+          rgba($color-primary, 0.55)
+        ),
+        url(../img/tour-min.webp);
+    }
+
+    &--3 {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from(rgba($color-primary, 0.55)),
+          to(rgba($color-primary, 0.55))
+        ),
+        url(../img/vacation-min.webp);
+      background-image: -o-linear-gradient(
+          left top,
+          rgba($color-primary, 0.55),
+          rgba($color-primary, 0.55)
+        ),
+        url(../img/vacation-min.webp);
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary, 0.55),
+          rgba($color-primary, 0.55)
+        ),
+        url(../img/vacation-min.webp);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 6rem;
+    right: 2rem;
+    width: 75%; // To help force line-break on heading
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem; // Space around heading
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; // Properly aligns each line of heading on top of itself
+
+    &--1 {
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from(rgba($color-secondary, 0.85)),
+        to(rgba($color-secondary, 0.85))
+      );
+      background-image: -o-linear-gradient(
+        left top,
+        rgba($color-secondary, 0.85),
+        rgba($color-secondary, 0.85)
+      );
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary, 0.85),
+        rgba($color-secondary, 0.85)
+      );
+    }
+
+    &--2 {
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from(rgba($color-secondary, 0.85)),
+        to(rgba($color-secondary, 0.85))
+      );
+      background-image: -o-linear-gradient(
+        left top,
+        rgba($color-secondary, 0.85),
+        rgba($color-secondary, 0.85)
+      );
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary, 0.85),
+        rgba($color-secondary, 0.85)
+      );
+    }
+
+    &--3 {
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from(rgba($color-secondary, 0.85)),
+        to(rgba($color-secondary, 0.85))
+      );
+      background-image: -o-linear-gradient(
+        left top,
+        rgba($color-secondary, 0.85),
+        rgba($color-secondary, 0.85)
+      );
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary, 0.85),
+        rgba($color-secondary, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    padding: 3rem; // Space between img and ul
+
+    p {
+      font-size: $default-font-size;
+      padding: 0 2rem;
+    }
+  }
+
+  // CARD BACK SIDE STYLING
+  &__companylist {
+    text-align: center;
+    font-size: 2rem;
+    color: $color-white;
+    margin-top: 4rem;
+
+    &-black {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 4rem;
+      color: $color-black-light;
+    }
+
+    &-grey {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 4rem;
+      color: $color-grey-dark;
+    }
+  }
+
+  // CARD BACK BUTTON
+  &__cta {
+    // Call to action btn
+    width: 50%;
+    text-align: center;
+    margin-top: 4.5rem;
+    white-space: nowrap;
+  }
+}

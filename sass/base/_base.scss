@@ -1,0 +1,119 @@
+*,
+*::after,
+*::before {
+  /*Universal selector*/
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; /*Sets the box-sizing property on every element on the page to inherit which forces every element to inherit the border-box value in the body rule(Good practice)*/
+}
+
+html {
+  // DEFINES WHAT 1 REM IS
+  font-size: 62.5%; /*62.5% of 16px = 10px (We use a % to be more user friendly, 16px is default)*/
+  /*Global font-size (Each rem unit is now 10px)*/
+  // 1 REM = 10px
+  scroll-behavior: smooth;
+
+  // FOR MEDIA QUERIES
+  @include respond(big-desktop) {
+    // width > 1800px
+    font-size: 75%; // 1rem = 12px, 12/16 = 75%
+  }
+
+  @include respond(tab-landscape) {
+    // width < 1200px?
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-portrait) {
+    // width < 900px?
+    // When we include this media query with the argument tab-portrait, the browser will find the appropriately named query
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; /*Changes the box model so that borders/paddings are no longer added to the total width/height we specify for a box*/
+  margin: 0; // NICE CURVES
+}
+
+// NICE CURVES
+
+section {
+  position: relative; // NICE CURVES
+  min-height: 40rem;
+  padding: 10rem 20vw;
+}
+
+// Offwhite sections
+.wave-mocha {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-mocha svg {
+  position: relative;
+  display: block;
+  width: calc(140% + 1.3px);
+  height: 210px;
+}
+
+.wave-mocha .shape-fill {
+  fill: #e7e0dc;
+}
+
+.curve-space {
+  padding-bottom: 5rem;
+
+  &--big {
+    padding-bottom: 10rem;
+  }
+}
+
+// Mocha sections
+.wave-offwhite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-offwhite svg {
+  position: relative;
+  display: block;
+  width: calc(140% + 1.3px);
+  height: 210px;
+}
+
+.wave-offwhite .shape-fill {
+  fill: #f4f4f4;
+}
+
+// ABOUT US section
+.wave-aboutus {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-aboutus svg {
+  position: relative;
+  display: block;
+  width: calc(154% + 1.3px);
+  height: 298px;
+}
+
+.wave-aboutus .shape-fill {
+  fill: #e7e0dc;
+}
