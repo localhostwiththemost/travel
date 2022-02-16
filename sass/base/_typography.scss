@@ -116,6 +116,17 @@ body {
       width: 30rem;
     }
   }
+
+  &__thanks {
+    // THANKS, WE'LL BE IN TOUCH
+    font-size: 3rem;
+    font-weight: 200;
+    font-family: "Lora", serif;
+    color: $color-grey-dark;
+    text-transform: uppercase;
+    word-spacing: 0.5rem;
+    letter-spacing: 0.8rem;
+  }
 }
 
 .heading-tertiary {
@@ -124,7 +135,6 @@ body {
   font-size: 2.6rem;
   font-weight: 300;
   letter-spacing: 0.2rem;
-  //white-space: nowrap;
 
   @include respond(tab-landscape) {
     line-height: 125%;

@@ -21,9 +21,13 @@ $messageSubject = "New UNTR Customer";
 $to = "jpowelldev@gmail.com";
 $body = "";
 
-$body .= "From: ".$userName. "\r\n";
+$body .= "From: ".$userFirstname. "\r\n";
+$body .= "From: ".$userLastname. "\r\n";
 $body .= "Email: ".$userEmail. "\r\n";
 $body .= "Phone: ".$userPhone. "\r\n";
+$body .= "Journey: ".$userJourney. "\r\n";
+$body .= "Destination: ".$userDestination. "\r\n";
+$body .= "Other Info: ".$userOtherinfo. "\r\n";
 
 mail($to, $messageSubject, $body);
 
@@ -71,7 +75,7 @@ $message_sent = true;
         ?>
    <body class="thanks-bg">
      <div class="contact-form-thanks u-margin-top-big u-margin-bottom-big u-center-text">
-      <h2 class="heading-secondary">Thanks, we'll be in touch</h2>
+      <h2 class="heading-secondary__thanks">Thanks, we'll be in touch</h2>
       <div class="u-center-text u-margin-top-medium">
         <a href="index.php" class="btn-text">Return to home page</a>
       </div>

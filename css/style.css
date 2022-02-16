@@ -251,6 +251,15 @@ body {
     width: 30rem;
   }
 }
+.heading-secondary__thanks {
+  font-size: 3rem;
+  font-weight: 200;
+  font-family: "Lora", serif;
+  color: #696969;
+  text-transform: uppercase;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.8rem;
+}
 
 .heading-tertiary {
   font-family: "Raleway", sans-serif;
@@ -865,6 +874,25 @@ body {
 
 .form-invalid {
   outline: 2px solid #ff0000;
+}
+
+.contact-form-thanks {
+  width: 75%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.3rem;
+  color: #000;
+  font-size: 1.6rem;
+  padding: 5rem;
+  text-align: center;
+  text-transform: none;
+  white-space: normal;
+}
+
+.thanks-bg {
+  background-color: #e7e0dc;
 }
 
 .img-container {
