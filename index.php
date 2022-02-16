@@ -70,9 +70,9 @@ $message_sent = true;
       if($message_sent):
         ?>
    <body class="thanks-bg">
-     <div class="contact-form-thanks u-margin-top-big u-margin-bottom-big">
+     <div class="contact-form-thanks u-margin-top-big u-margin-bottom-big u-center-text">
       <h2 class="heading-secondary">Thanks, we'll be in touch</h2>
-      <div class="u-center-text u-margin-top-small">
+      <div class="u-center-text u-margin-top-medium">
         <a href="index.php" class="btn-text">Return to home page</a>
       </div>
     </div>
