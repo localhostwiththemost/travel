@@ -18,7 +18,7 @@ $userDestination = $_POST['destination'];
 $userOtherinfo = $_POST['otherinfo'];
 $messageSubject = "New UNTR Customer";
 
-$to = "jpowelldev@gmail.com";
+$to = "sales@theuntroubledtraveller.com";
 $body = "";
 
 $body .= "From: ".$userFirstname. "\r\n";
