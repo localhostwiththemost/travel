@@ -46,7 +46,7 @@ $message_sent = true;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="#" />
+    <meta name="description" content="The Untroubled Traveller offers our personally curated travel services to you. From luxury river and ocean cruises to small group guided tours to personal bucket list vacations, our goal is to provide you a seamless and effortless travel experience." />
     <meta name="theme-color" content="#e7e0dc" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -66,7 +66,7 @@ $message_sent = true;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
 
-    <title>The Unbothered Traveller | Travel Agency</title>
+    <title>The Untroubled Traveller | Travel Agency</title>
   </head>
     
   <body>
@@ -481,20 +481,13 @@ $message_sent = true;
       <div class="u-center-text u-margin-bottom-medium">
         <h2 class="heading-secondary heading-secondary__aboutus">About Us</h2>
       </div>
-    
-      <div class="u-center-text u-margin-bottom-big">
-        <p class="section-intro section-intro__aboutus">
-          The Untroubled Traveller offers our personally curated travel services to you. 
-          From luxury river and ocean cruises to small group guided tours to personal bucket list vacations, our goal is to provide you a seamless and effortless travel experience. Let us plan your next adventure! Whether you prefer city centers, submerged in the hustle and bustle of the locals, or you like to go off the beaten path and delve into the true nature of a place, we will get you there and back again without a hitch. We are certified specialists in every luxury river and ocean cruise line and all the most trusted guided tour companies. Travel with confidence and like our motto says... "Go Make Memories!"
-        </p>
-      </div>
 
       <div class="flex-container flex-container__aboutus u-margin-bottom-big">
         <img src="img/steve-min.webp" class="aboutus-img" alt="An image of Steve" />
         <div class="aboutus-caption">
           <h3 class="heading-tertiary u-margin-bottom-small">Steve</h3>
           <p>
-            Steve has been a full-time travel agent since 2014, specializing in luxury ocean and river cruises in the Mediterranean, Caribbean, Europe, Asia and Antarctica. He has extensive knowledge of guided tour packages in the US and worldwide for families, couples and solo travellers. If you are looking to book a larger group on a tour or cruise, he has the experience and the connections to get your group the pricing, amenities and perks that you want. This level of experience and service is priceless, but the quotes are free.
+            Steve started as a full-time agent in the travel industry in 2014, specializing in luxury ocean and river cruises in the Mediterranean, Caribbean, Europe, Asia and Antarctica. He has extensive knowledge of guided tour packages in the US and worldwide for families, couples and solo travellers. If you are looking to book a larger group on a tour or cruise, he has the experience and the connections to get your group the pricing, amenities and perks that you want. This level of experience and service is priceless, but the quotes are free.
           </p>
         </div>
       </div>
