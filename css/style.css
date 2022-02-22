@@ -1355,7 +1355,7 @@ figcaption {
 .main-nav {
   list-style: none;
   margin-top: 1.5rem;
-  margin-right: 2rem;
+  margin-right: 3rem;
   white-space: nowrap;
   padding-top: 0.1rem;
 }
@@ -1379,22 +1379,6 @@ figcaption {
 @media (max-width: 56.25em) {
   .main-nav li {
     margin-left: 2rem;
-  }
-}
-@media (max-width: 28.125em) {
-  .main-nav li {
-    margin-left: 1.5rem;
-  }
-}
-@media (max-width: 23.4375em) {
-  .main-nav li {
-    font-size: 1.6rem;
-    margin-left: 1rem;
-  }
-}
-@media (max-width: 18.75em) {
-  .main-nav li {
-    margin-left: 0.8rem;
   }
 }
 
