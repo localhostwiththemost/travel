@@ -21,8 +21,8 @@ $messageSubject = "New UNTR Customer";
 $to = "sales@theuntroubledtraveller.com";
 $body = "";
 
-$body .= "From: ".$userFirstname. "\r\n";
-$body .= "From: ".$userLastname. "\r\n";
+$body .= "First Name: ".$userFirstname. "\r\n";
+$body .= "Last Name: ".$userLastname. "\r\n";
 $body .= "Email: ".$userEmail. "\r\n";
 $body .= "Phone: ".$userPhone. "\r\n";
 $body .= "Journey: ".$userJourney. "\r\n";
