@@ -1223,14 +1223,14 @@ figcaption {
   white-space: nowrap;
   float: right;
 }
+@media (max-width: 75em) {
+  .social__navigation {
+    margin-right: 8rem;
+  }
+}
 @media (max-width: 56.25em) {
   .social__navigation {
     margin-right: 2rem;
-  }
-}
-@media (max-width: 75em) {
-  .social__navigation {
-    margin-right: 1rem;
   }
 }
 .social__list {

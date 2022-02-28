@@ -98,13 +98,13 @@
     white-space: nowrap;
     float: right;
 
-    @include respond(tab-portrait) {
-      margin-right: 2rem;
-    }
-
     @include respond(tab-landscape) {
       // width < 1200px?
-      margin-right: 1rem;
+      margin-right: 8rem;
+    }
+
+    @include respond(tab-portrait) {
+      margin-right: 2rem;
     }
   }
 
