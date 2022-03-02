@@ -363,6 +363,7 @@ body {
   cursor: pointer;
   color: #000;
   font-family: "Raleway", sans-serif;
+  white-space: nowrap;
 }
 .btn-main:hover {
   -webkit-transform: translateY(-3px);
