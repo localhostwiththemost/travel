@@ -32,13 +32,13 @@ body {
       font-size: 5.8rem;
       white-space: normal;
       line-height: 1.2;
-      margin-top: 0.5rem;
+      margin-top: 4.5rem; // .5rem
       margin-bottom: 0.1rem;
     }
 
     @include respond(small-phone) {
       font-size: 5rem;
-      margin-top: -5rem;
+      margin-top: 3rem; //-5rem
     }
 
     @include respond(tiny-phone) {
