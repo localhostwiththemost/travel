@@ -23,10 +23,25 @@
     display: none;
 
     @include respond(tab-landscape) {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: flex-end;
       margin-right: 1rem;
+      margin-top: 6rem;
+    }
+
+    @include respond(tab-portrait) {
+      margin-top: 9rem;
+    }
+
+    @include respond(mini-phone) {
       margin-top: 6rem;
     }
   }

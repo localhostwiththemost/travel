@@ -1070,10 +1070,27 @@ figcaption {
 }
 @media (max-width: 75em) {
   .flex-container__holdtoflip {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     margin-right: 1rem;
+    margin-top: 6rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .flex-container__holdtoflip {
+    margin-top: 9rem;
+  }
+}
+@media (max-width: 18.75em) {
+  .flex-container__holdtoflip {
     margin-top: 6rem;
   }
 }
