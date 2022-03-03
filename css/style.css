@@ -1064,6 +1064,19 @@ figcaption {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+.flex-container__holdtoflip {
+  visibility: none;
+  display: none;
+}
+@media (max-width: 75em) {
+  .flex-container__holdtoflip {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    margin-top: 6rem;
+  }
+}
 .flex-container__form {
   display: -webkit-box;
   display: -ms-flexbox;

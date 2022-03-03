@@ -17,6 +17,20 @@
     justify-content: space-between;
   }
 
+  // CARDS
+  &__holdtoflip {
+    visibility: none;
+    display: none;
+
+    @include respond(tab-landscape) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-right: 1rem;
+      margin-top: 6rem;
+    }
+  }
+
   &__form {
     display: -webkit-box;
     display: -ms-flexbox;

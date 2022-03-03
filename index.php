@@ -152,6 +152,9 @@ $message_sent = true;
                     Worldwide
                   </p>
                 </div>
+                <div class="flex-container flex-container__holdtoflip">
+                <p>Hold to flip<ion-icon name="sync-outline"></ion-icon></p>
+              </div>
               </div>
               <div class="card__side card__side--back card__side--back-1">
                 <div class="card__companylist-grey">
@@ -190,6 +193,9 @@ $message_sent = true;
                 <div class="card__details">
                   <p>We feature Luxury small group and Private guided tours</p>
                 </div>
+                <div class="flex-container flex-container__holdtoflip">
+                  <p>Hold to flip<ion-icon name="sync-outline"></ion-icon></p>
+                </div>
               </div>
               <div class="card__side card__side--back card__side--back-2">
                 <div class="card__companylist-grey">
@@ -225,6 +231,9 @@ $message_sent = true;
                 </h3>
                 <div class="card__details">
                   <p>Luxury resorts from Beaches to Mountains to City Center</p>
+                </div>
+                <div class="flex-container flex-container__holdtoflip">
+                  <p>Hold to flip<ion-icon name="sync-outline"></ion-icon></p>
                 </div>
               </div>
               <div class="card__side card__side--back card__side--back-3">
