@@ -503,8 +503,7 @@ $message_sent = true;
         
 
           <p class="footer__copyright">
-            Built by <a href="https://developerjoe.io/" class="footer__link">Joseph Powell</a>; &nbsp;
-            a Houston-based front end developer.
+          <small>© 2022 <a href="https://developerjoe.io/" class="footer__link">Powell Development</a>. All rights reserved</small>
           </p>
       </div>
         </div>
