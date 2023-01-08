@@ -120,6 +120,7 @@ $message_sent = true;
               src="img/compassrose-min.webp"
               class="img-container__compassimg"
               alt="An image of a compass"
+              loading="lazy"
               />
           </div>
           <span class="heading-primary--sub">Go make memories!</span>
@@ -460,7 +461,7 @@ $message_sent = true;
       -->
 
       <div class="flex-container flex-container__aboutus">
-        <img src="img/kim-min.webp" class="aboutus-img" alt="An image of Kim" />
+        <img src="img/kim-min.webp" class="aboutus-img" alt="An image of Kim" loading="lazy" />
         <div class="aboutus-caption">
           <h3 class="heading-tertiary u-margin-bottom-small">Kimberly</h3>
         <p>Kimberly has always loved travel, books, and learning as much about the world as she can. Family vacations in her youth, along with studying abroad in college, gave her a lust for learning about new places and cultures, and seeing the world. Her time as a wife of 28 years, and the mother of two incredible children, has taught her the value of time spent together, making memories that will last a lifetime. After spending years as an educator, non-profit coordinator, and mom, she has decided to combine her love of cultures and the attention to detail learned in her work, to creating incredible, personalized travel experiences for her clients. She is currently certified with several cruise lines, and continues to throw her love of learning into gaining more travel knowledge and certifications to help you, the traveler plan your excursion and  GO MAKE MEMORIES!</p>
