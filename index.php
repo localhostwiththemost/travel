@@ -440,7 +440,7 @@ $message_sent = true;
             </svg>
         </div> 
       </section>
-
+<!--
     <section class="section-aboutus">
       <div class="curve-space--big"></div>
 
@@ -448,7 +448,7 @@ $message_sent = true;
         <h2 class="heading-secondary heading-secondary__aboutus">About Us</h2>
       </div>
 
-      <!--
+      
       <div class="flex-container flex-container__aboutus u-margin-bottom-big">
         <img src="img/steve-min.webp" class="aboutus-img" alt="An image of Steve" />
         <div class="aboutus-caption">
@@ -458,7 +458,7 @@ $message_sent = true;
           </p>
         </div>
       </div>
-      -->
+      
 
       <div class="flex-container flex-container__aboutus">
         <img src="img/kim-min.webp" class="aboutus-img" alt="An image of Kim" loading="lazy" />
@@ -469,7 +469,8 @@ $message_sent = true;
       </div>
      
   </section>
-    </main>
+      -->    
+</main>
 
     <footer class="footer">
       <div class="row social">
